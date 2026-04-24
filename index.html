@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Global Hack Club | Teen Web Development Hackathon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #0b1020;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    header {
+      padding: 24px 0;
+      position: sticky;
+      top: 0;
+      background: rgba(11, 16, 32, 0.95);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #4fd1c5;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+    }
+
+    .nav-links a:hover {
+      color: #4fd1c5;
+      transition: 0.3s;
+    }
+
+    .hero {
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(135deg, #0b1020, #111a35);
+    }
+
+    .hero-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span {
+      color: #4fd1c5;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: #d1d5db;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 28px;
+      border-radius: 12px;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .btn-primary {
+      background: #4fd1c5;
+      color: #0b1020;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+    }
+
+    .hero-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.08);
+      padding: 30px;
+      border-radius: 24px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+
+    section {
+      padding: 90px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-title h2 {
+      font-size: 2.4rem;
+      margin-bottom: 10px;
+    }
+
+    .section-title p {
+      color: #cbd5e1;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: #131c3a;
+      padding: 30px;
+      border-radius: 20px;
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .card h3 {
+      margin-bottom: 15px;
+      color: #4fd1c5;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 20px;
+    }
+
+    .timeline-item {
+      background: #131c3a;
+      padding: 24px;
+      border-radius: 18px;
+      border-left: 4px solid #4fd1c5;
+    }
+
+    .cta {
+      text-align: center;
+      background: linear-gradient(135deg, #13203f, #1d2d5a);
+      border-radius: 28px;
+      padding: 60px 30px;
+    }
+
+    footer {
+      padding: 30px 0;
+      text-align: center;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      color: #cbd5e1;
+    }
+
+    @media (max-width: 768px) {
+      .hero-content {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 2.4rem;
+      }
+
+      .nav-links {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">Global Hack Club</div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#tracks">Tracks</a></li>
+          <li><a href="#schedule">Schedule</a></li>
+          <li><a href="#join">Join</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-content">
+      <div>
+        <h1>Teenagers Building the Future of <span>Web Development</span></h1>
+        <p>
+          A global hackathon powered by Global Hack Club to inspire teenage developers,
+          strengthen web development skills, and create real solutions that impact the world.
+        </p>
+        <a href="#join" class="btn btn-primary">Get Started</a>
+      </div>
+
+      <div class="hero-card">
+        <h3>Hackathon Highlights</h3>
+        <p>🌍 Global Participants</p>
+        <p>💻 Web Development Challenges</p>
+        <p>🚀 Startup-Level Projects</p>
+        <p>🏆 Awards & Recognition</p>
+        <p>🤝 Mentorship by Experts</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <div class="section-title">
+        <h2>About The Event</h2>
+        <p>Empowering the next generation of developers worldwide.</p>
+      </div>
+
+      <div class="cards">
+        <div class="card">
+          <h3>Mission</h3>
+          <p>To improve web development education and innovation through youth-led hackathons.</p>
+        </div>
+
+        <div class="card">
+          <h3>Audience</h3>
+          <p>Teenagers passionate about coding, design, startups, and solving global challenges.</p>
+        </div>
+
+        <div class="card">
+          <h3>Impact</h3>
+          <p>Projects built here can become real startups, community tools, and future companies.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="tracks">
+    <div class="container">
+      <div class="section-title">
+        <h2>Hackathon Tracks</h2>
+        <p>Choose your challenge and build something extraordinary.</p>
+      </div>
+
+      <div class="cards">
+        <div class="card">
+          <h3>Frontend Innovation</h3>
+          <p>Create beautiful, responsive, and user-friendly interfaces.</p>
+        </div>
+
+        <div class="card">
+          <h3>AI + Web</h3>
+          <p>Build intelligent web platforms powered by AI solutions.</p>
+        </div>
+
+        <div class="card">
+          <h3>Social Impact</h3>
+          <p>Develop platforms that solve educational, healthcare, or environmental issues.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="schedule">
+    <div class="container">
+      <div class="section-title">
+        <h2>Event Schedule</h2>
+        <p>Your journey from idea to final pitch.</p>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <h3>Day 1 — Opening Ceremony</h3>
+          <p>Introduction, team formation, and challenge announcement.</p>
+        </div>
+
+        <div class="timeline-item">
+          <h3>Day 2 — Build Sprint</h3>
+          <p>Develop your project with mentor guidance and workshops.</p>
+        </div>
+
+        <div class="timeline-item">
+          <h3>Day 3 — Final Pitch</h3>
+          <p>Present your solution to judges and compete for top prizes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="join">
+    <div class="container">
+      <div class="cta">
+        <h2>Join the Global Movement</h2>
+        <p>
+          Build. Learn. Compete. Lead the next generation of web innovation.
+        </p>
+        <br>
+        <a href="#" class="btn btn-primary">Register Now</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 Global Hack Club | Teen Web Development Hackathon</p>
+    </div>
+  </footer>
+
+</body>
+</html>
