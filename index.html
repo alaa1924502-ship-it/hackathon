@@ -7,6 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
   <style>
     * {
       margin: 0;
@@ -102,6 +103,8 @@
       border-radius: 12px;
       font-weight: 600;
       transition: 0.3s;
+      border: none;
+      cursor: pointer;
     }
 
     .btn-primary {
@@ -179,6 +182,32 @@
       padding: 60px 30px;
     }
 
+    .form-box {
+      display: none;
+      margin-top: 30px;
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: left;
+    }
+
+    .form-box h3 {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .form-box input {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      outline: none;
+    }
+
     footer {
       padding: 30px 0;
       text-align: center;
@@ -201,12 +230,14 @@
     }
   </style>
 </head>
+
 <body>
 
   <header>
     <div class="container">
       <nav>
         <div class="logo">IgnitED</div>
+
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
           <li><a href="#tracks">Tracks</a></li>
@@ -221,10 +252,13 @@
     <div class="container hero-content">
       <div>
         <h1>Teenagers Building the Future of <span>Tech Development</span></h1>
+
         <p>
           A global Competition powered by El-sweedy University to inspire teenage developers,
           strengthen tech development skills, and create real solutions that impact the water.
         </p>
+
+        <!-- Get Started goes to Join section -->
         <a href="#join" class="btn btn-primary">Get Started</a>
       </div>
 
@@ -277,6 +311,7 @@
           <h3>Skill Innovation</h3>
           <p>Create beautiful, responsive, and user-friendly interfaces.</p>
         </div>
+
         <div class="card">
           <h3>Tech Innovation</h3>
           <p>Build tech platforms in Web Development, App Devlopment, Game Devlopment for protection of water.</p>
@@ -320,11 +355,31 @@
     <div class="container">
       <div class="cta">
         <h2>Join the Global Movement</h2>
+
         <p>
           Build. Learn. Compete. Lead the next generation of tech innovation.
         </p>
+
         <br>
-        <a href="#" class="btn btn-primary">Join us</a>
+
+     
+        <button onclick="showForm()" class="btn btn-primary">
+          Join us
+        </button>
+
+        
+        <div id="registrationForm" class="form-box">
+          <h3>Registration Form</h3>
+
+          <input type="text" placeholder="Full Name">
+          <input type="email" placeholder="Email Address">
+          <input type="text" placeholder="School Name">
+          <input type="text" placeholder="Country">
+
+          <button class="btn btn-primary" style="width:100%;">
+            Submit Registration
+          </button>
+        </div>
       </div>
     </div>
   </section>
@@ -334,6 +389,12 @@
       <p>© 2026 IgnitED | Teen skills Development Competion</p>
     </div>
   </footer>
+
+  <script>
+    function showForm() {
+      document.getElementById("registrationForm").style.display = "block";
+    }
+  </script>
 
 </body>
 </html>
